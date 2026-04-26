@@ -1,4 +1,6 @@
 from envs.r1_support.grader import compute_reward as r1_grader
+from envs.r2_placeholder.grader import compute_reward as r2_grader
+
 
 
 class Evaluator:
@@ -6,7 +8,7 @@ class Evaluator:
         self.env = env
         self._graders = {
             "r1_support": r1_grader,
-            # "r2_ps": r2_grader   ← you'll add this when R2 PS is locked
+            "r2_ps": r2_grader,
         }
 
     def score(self, output: dict, expected: dict) -> float:
